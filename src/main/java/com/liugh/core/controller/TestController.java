@@ -17,7 +17,7 @@ public class TestController {
 	
 	 @MyRequestMapping("/doTest")
     public void test1(HttpServletRequest request, HttpServletResponse response,
-    		@MyRequestParam("param") String param){
+    		@MyRequestParam("param") String param, @MyRequestParam("age") Integer age){
  		System.out.println(param);
 	    try {
             response.getWriter().write( "doTest method success! param:"+param);
